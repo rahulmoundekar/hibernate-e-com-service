@@ -32,8 +32,6 @@ public class Customer {
 	@Column(name = "mobile")
 	private String mobileNo;
 
-	// one person many product
-
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer", fetch = FetchType.EAGER)
 	@Fetch(FetchMode.SELECT)
 	private List<CustomerProduct> customerProduct;
